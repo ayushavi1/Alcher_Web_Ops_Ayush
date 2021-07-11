@@ -1,0 +1,23 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Login | Alcher Stream{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="container">
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group col-8">
+              <legend class="border-bottom pt-4 mb-4">Log In</legend>
+              {{ form|crispy }}
+          </fieldset>
+          <div class="form-group ml-3">
+              <button class="btn btn-outline-info" type="submit">Login</button>
+          </div>
+      </form>
+      <div class="border-top pt-3 mb-4">
+          <small class="text-muted">
+              Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now!</a>
+          </small>
+      </div>
+  </div>
+{% endblock content %}

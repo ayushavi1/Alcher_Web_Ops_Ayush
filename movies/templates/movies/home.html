@@ -1,0 +1,40 @@
+{% extends "movies/base.html" %}
+{% load static %}
+{% block title %}Alcher Stream{% endblock %}
+{% block searchbox %}
+<form id="form"><input id="search-box" type="text" placeholder="Search movie here" /></form>
+{% endblock %}
+{% block header %}
+    <h1 class="heading">
+    STREAM ALL THE POPULAR <br />
+    MOVIES ON THE GO
+    </h1>
+    <div class="button"><button class="get-started">GET STARTED</button></div>
+{% endblock %}
+{% block content %}
+<section>
+    <h2 id="results">BLOCKBUSTER HITS</h2>
+    <main id="main">
+      <div class="movie">
+        <img class="movie-img" src="{% static 'movies/img/Avatar.jpg' %}" alt="Avatar" />
+        <p class="movie-text">Avatar (2009)</p>
+      </div>
+      <div class="movie">
+        <img class="movie-img" src="{% static 'movies/img/Endgame.jpg' %}" alt="Avengers: Endgame" />
+        <p class="movie-text"> Avengers: Endgame (2019)</p>
+      </div>
+      <div class="movie">
+        <img class="movie-img" src="{% static 'movies/img/Titanic.jpg' %}" alt="Titanic" />
+        <p class="movie-text">Titanic (1997)</p>
+      </div>
+      <div class="movie">
+        <img
+          class="movie-img"
+          src="{% static 'movies/img/Star Wars.jpg' %}"
+          alt="Star Wars: The Force Awakens"
+        />
+        <p class="movie-text">Star Wars: The Force Awakens (2015)</p>
+      </div>
+    </main>
+  </section>
+{% endblock content %}

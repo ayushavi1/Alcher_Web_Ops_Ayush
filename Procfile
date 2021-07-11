@@ -1,0 +1,1 @@
+web: gunicorn Alcher_Web_Ops.wsgi --log-file -
